@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { registerUser } from '../actions/actions';
-import LoginForm from './LoginForm';
+
 
 function RegisterForm(props){
     const [initialForm] = useState({
@@ -15,12 +15,6 @@ function RegisterForm(props){
 
     //universal form handler
     const [form, setForm] = useState(initialForm)
-
-    const [toggle, setToggle] = useState(false)
-
-    function handleToggle(e){
-        setToggle(!toggle)
-    }
 
     //universal change handler
     function handleChange(e){
@@ -35,8 +29,7 @@ function RegisterForm(props){
         history.push('/dashboard');
     }
     return(
-        <>
-        {toggle ? <LoginForm /> : <Form onSubmit={handleSubmit}>
+         <Form onSubmit={handleSubmit}>
             <Form.Group className="formGroup" controlId="formUsername">
             <Form.Label> Username: </Form.Label>
             <Form.Control type="text" name="username" placeholder="Enter Username" onChange={handleChange}/>
@@ -63,12 +56,7 @@ function RegisterForm(props){
             </Form.Group>
 
             <Button variant="primary" type="submit">Submit</Button>
-        </Form>}
-
-        <div>
-            Already Have an Account. <div onClick={handleToggle}>Click Here!</div>
-        </div>
-        </>
+        </Form>
     )
 }
 

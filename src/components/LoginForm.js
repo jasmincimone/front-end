@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import {connect} from 'react-redux'
 import { loginUser } from '../actions/actions';
@@ -49,7 +49,7 @@ function LoginForm(props){
 
             <Button variant="primary" type="submit">Submit</Button>
         </Form>
-        </div>
+    </div>
     )
 }
 
