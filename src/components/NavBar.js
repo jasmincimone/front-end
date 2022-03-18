@@ -9,8 +9,9 @@ const NavBarTop = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/currencies"> Currencies. </Nav.Link>
                     <Nav.Link as={Link} to="/mynews"> My News. </Nav.Link>
+                    <Nav.Link as={Link} to="/currencies"> My Currencies. </Nav.Link>
+                    
 
                     <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1"> About. </NavDropdown.Item>

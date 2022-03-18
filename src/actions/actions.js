@@ -35,11 +35,9 @@ export const fetchSite = () => (dispatch) => {
     axios
     .get('https://fullstack-trading-app.herokuapp.com/')
     .then(data => {
-        console.log(data.data.data)
-        dispatch({type: FETCH_SITE_COMPLETE, payload: data.data.data})
+        dispatch({type: FETCH_SITE_COMPLETE, payload: data.data})
     })
     .catch(err=> {
-        console.log(err.message)
         dispatch({type: FETCH_SITE_FAIL, payload: err.message})
     })
 }
@@ -47,21 +45,17 @@ export const fetchSite = () => (dispatch) => {
 export const registerUser = (reg) => (dispatch) => {
     dispatch({type: REGISTER_START})
     axios.post('https://fullstack-trading-app.herokuapp.com/auth/register', reg)
-    .then(data => console.log(data))
+    .then(data => {
         dispatch({type: REGISTER_COMPLETE, payload: reg})
+    })
     .catch(err => dispatch({type: REGISTER_FAIL, payload: err.message})) 
 }
 
 export const loginUser = (newLogin) => (dispatch) => {
-    console.log(newLogin);
     dispatch({type: FETCH_SITE_START})
     axios
     .post('https://fullstack-trading-app.herokuapp.com/auth/login', newLogin)
     .then(data => {
-        console.log(data.data.token)
-        console.log(data.data.username)
-        console.log(data.data)
-
         localStorage.setItem('token', data.data.token);
         localStorage.setItem('username', data.data.username);
     })
@@ -71,12 +65,11 @@ export const loginUser = (newLogin) => (dispatch) => {
 export const fetchNews = () => (dispatch) => {
     dispatch({type: FETCH_NEWS_START})
     axios
-    .get('https://finnhub.io/api/v1/news?category=general&minId=10&token=c8ofbuaad3iatn99j4qg')
+    .get('https://finnhub.io/api/v1/news?category=forex&minId=10&token=c8ofbuaad3iatn99j4qg')
     .then(data => {
         dispatch({type: FETCH_NEWS_COMPLETE, payload: data.data})
     })
     .catch(err=> {
-        console.log(err.message)
         dispatch({type: FETCH_NEWS_FAIL, payload: err.message})
     })
 }

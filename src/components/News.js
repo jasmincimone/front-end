@@ -31,8 +31,11 @@ const News = (props) => {
         <div>
             {props.isLoading ? "LOADING NEWS..." : ""}
             {props.error ? props.error : ""}
-            {props.News ?
-                <Article news = {props.News} favorite={false} key={props.News}/>
+            {props.news ? props.news.map(article => {
+                return(
+                    <Article news = {article} favorite={false} key={article.id} />
+                )
+            })
             : "NO NEWS HERE =("}
         </div>
     </div>

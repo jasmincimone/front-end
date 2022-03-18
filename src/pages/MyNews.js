@@ -3,21 +3,19 @@ import { connect } from 'react-redux';
 import News from '../components/News';
 
 const mapStateToProps = state => ({
-    FavoriteNews: state.favorites
+    FavoriteNews: state.favorite
 })
 
 function MyNews(props){
     const { FavoriteNews } = props
-    console.log(props)
 
   return (
     <div>
         <h1>MyNews</h1>
-
-        {FavoriteNews ? FavoriteNews.map(news => {
-            console.log(news)
+        {FavoriteNews ? FavoriteNews.map(article => {
+            console.log(article)
             return(
-                <News news={news} key={news} favorite={true}/>
+                <News news={article} key={article.id} favorite={true}/>
             )
         })
             : "NO FAVORITE NEWS =("}
