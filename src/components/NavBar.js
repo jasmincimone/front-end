@@ -10,7 +10,7 @@ const NavBarTop = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link href="#currencies">Currencies</Nav.Link>
-                    <Nav.Link as={Link} to="/currencies/:id" > My Currencies </Nav.Link>
+                    <Nav.Link as={Link} to="/mycurrencies" > My Currencies </Nav.Link>
                     <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1"> Action3</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Action4</NavDropdown.Item>
