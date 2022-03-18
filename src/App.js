@@ -6,10 +6,10 @@ import {connect} from 'react-redux';
 import Home from './pages/Home'
 import Register from './pages/Register';
 import Login from './pages/Login';
-import MyCurrencies from './pages/MyCurrencies';
 import Navbartop from './components/NavBar';
 import NavBottom from './components/NavBottom';
 import { fetchSite } from './actions/actions';
+import MyNews from './pages/MyNews';
 
 
 
@@ -33,8 +33,8 @@ function App(props) {
           <Home />
         </Route>
 
-        <Route path="/mycurrencies">
-          <MyCurrencies />
+        <Route path="/mynews">
+          <MyNews />
         </Route>
 
         <Route path="/register">

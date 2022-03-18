@@ -7,7 +7,7 @@ import {
     REGISTER_FAIL, 
     LOGIN_START, 
     LOGIN_COMPLETE, 
-    LOGIN_FAIL, } from "../actions/actions";
+    LOGIN_FAIL} from "../actions/actions";
 import dummyData from '../dummyData';
 
 const initialState = {
