@@ -5,7 +5,7 @@ const NavBarTop = () => {
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand as={Link} to='/home'> DaydreamFX. </Navbar.Brand>
+            <Navbar.Brand as={Link} to='/'> DaydreamFX. </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
@@ -14,8 +14,8 @@ const NavBarTop = () => {
                     
 
                     <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                        <NavDropdown.Item href="#/"> Home. </NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.1"> About. </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2"> Action4 </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.3"> GitHub. </NavDropdown.Item>
                     </NavDropdown>

@@ -29,7 +29,7 @@ function App(props) {
       <Navbartop/>
 
       <Switch>
-        <Route path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
 
