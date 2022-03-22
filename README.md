@@ -7,7 +7,7 @@ Back-End Hosted URL: ('https://fullstack-trading-app.herokuapp.com/')
 API URL: ('https://Finnhub.io')
 
 Wireframe:
-
+![Screen Shot 2022-03-11 at 5 02 49 PM](https://user-images.githubusercontent.com/95100754/159557407-af413a1d-d1a8-4d97-a723-5eee89f5671f.png)
 
 
 Features: 
