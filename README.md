@@ -4,9 +4,11 @@ Front-End Hosted URL: ('https://focused-allen-155036.netlify.app/')
 
 Back-End Hosted URL: ('https://fullstack-trading-app.herokuapp.com/')
 
+API URL: ('https://Finnhub.io')
+
 Wireframe:
 
-<img src = "./" />
+
 
 Features: 
 
@@ -17,6 +19,13 @@ Features:
     -Data pulling from rest API.
     
     -React.Bootstrap styling .
+
+UPCOMING FEATURES: 
+    - Persistant Login with Cookies
+    - Add news to Favorites
+    - Debug search bar to search news from API
+    - GET FOREX SYMBOL LIST with search bar searching api data
+    - Get STOCKS SYMBOL LIST and use stock symbol lookup from finnhub.
 
 
 

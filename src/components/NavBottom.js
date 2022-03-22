@@ -1,4 +1,5 @@
 import { Navbar, Container, } from "react-bootstrap";
+import fetchUser from '../actions/actions'
 
 const NavBottom= () => {
     let localUsername = localStorage.getItem('username')

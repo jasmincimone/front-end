@@ -14,7 +14,8 @@ const initialState = {
     siteData: dummyData,
     isLoading: false,
     error: '',
-    users: ''
+    users: '',
+    currentUser: ''
 }
 
 export default function reducer(state = initialState, action){
@@ -32,7 +33,6 @@ export default function reducer(state = initialState, action){
                 ...state, siteData: state.siteData, error: action.payload, users: "", isLoading: false
             }
         case REGISTER_START:
-            console.log(action.payload)
             return {
                 ...state, siteData: state.siteData, error: "", users: "", isLoading: true
             }

@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import {connect} from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import { registerUser } from '../actions/actions';
 import Login from '../pages/Login';
 
@@ -12,7 +11,6 @@ function RegisterForm(props){
         password: "",
         email:"",
     })
-    const history = useHistory()
 
     //universal form handler
     const [form, setForm] = useState(initialForm)
@@ -26,7 +24,6 @@ function RegisterForm(props){
 
     //universal change handler
     function handleChange(e){
-        console.log(e.target.name, e.target.value)
         setForm({...form, [e.target.name]: e.target.value})
     }
 
@@ -34,7 +31,6 @@ function RegisterForm(props){
         e.preventDefault()
         props.registerUser(form)
         setForm(initialForm)
-        history.push('/dashboard');
     }
     return(
         <>

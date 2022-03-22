@@ -17,7 +17,6 @@ function LoginForm(props){
 
     //universal change handler
     function handleChange(e){
-        console.log(e.target.name, e.target.value)
         setForm({...form, [e.target.name]: e.target.value})
     }
 

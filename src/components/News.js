@@ -1,9 +1,6 @@
-import {useState} from 'react';
 import React from 'react';
 import {connect} from 'react-redux';
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Form , Button } from 'react-bootstrap';
 import { fetchNews } from '../actions/actions';
 import Article from './Article';
 import SearchNews from './SearchNews';
@@ -20,12 +17,12 @@ const News = (props) => {
     
   return (
     <div>
-        <h1>News</h1>
+        <h1>My Profile</h1>
         <SearchNews />
 
         {/* Container that holds all news articles */}
         <div>
-            {props.isLoading ? "LOADING NEWS..." : ""}
+            {props.isLoading ? "LOADING Profile..." : ""}
             {props.error ? props.error : ""}
             {props.news ? props.news.map(article => {
                 return(
