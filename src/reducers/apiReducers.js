@@ -2,6 +2,9 @@ import {
     FETCH_NEWS_START,
     FETCH_NEWS_COMPLETE,
     FETCH_NEWS_FAIL,
+    FETCH_FOREX_START,
+    FETCH_FOREX_COMPLETE,
+    FETCH_FOREX_FAIL,
     ADD_FAVORITE_NEWS,
     REMOVE_FAVORITE_NEWS,
 } from '../actions/actions'
@@ -37,6 +40,18 @@ export default function reducer(state = initialState, action){
             let newState = state.favorites.filter(news => news !== action.payload)
             return {
                 ...state, favorites: newState,
+            }
+        case FETCH_FOREX_START:
+            return {
+                ...state, siteData: state.siteData, error: "", users: "", isLoading: true
+            }
+        case FETCH_FOREX_COMPLETE:
+            return {
+                ...state, siteData: action.payload, error: "", users: "", isLoading: false
+            }
+        case FETCH_FOREX_FAIL:
+            return {
+                ...state, siteData: state.siteData, error: action.payload, users: "", isLoading: false
             }
         default: return state;
     }

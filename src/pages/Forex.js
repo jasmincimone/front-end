@@ -4,17 +4,16 @@ import {connect} from 'react-redux';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Form , Button } from 'react-bootstrap';
-import { fetchNews } from '../actions/actions';
-import Article from './Article';
-import SearchNews from './SearchNews';
+
+
 
 const mapStateToProps = (state) => ({
-    news: state.apiReducers.siteData,
+    news: state.newsReducers.siteData,
     isLoading: state.isLoading,
     error: state.error
 })
 
-const News = (props) => {
+const Forex = (props) => {
     useEffect(() => {props.fetchNews()},
     []) 
     

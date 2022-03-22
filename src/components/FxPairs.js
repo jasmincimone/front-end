@@ -4,9 +4,7 @@ import {connect} from 'react-redux';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Form , Button } from 'react-bootstrap';
-import { fetchNews } from '../actions/actions';
-import Article from './Article';
-import SearchNews from './SearchNews';
+import { fetchForex } from '../actions/actions';
 
 const mapStateToProps = (state) => ({
     news: state.apiReducers.siteData,
@@ -14,20 +12,19 @@ const mapStateToProps = (state) => ({
     error: state.error
 })
 
-const News = (props) => {
-    useEffect(() => {props.fetchNews()},
+const Forex = (props) => {
+    useEffect(() => {props.fetchForex()},
     []) 
     
   return (
     <div>
-        <h1>News</h1>
-        <SearchNews />
+        <h1>Forex Symbols</h1>
 
         {/* Container that holds all news articles */}
         <div>
-            {props.isLoading ? "LOADING NEWS..." : ""}
+            {props.isLoading ? "LOADING FX PAIRS..." : ""}
             {props.error ? props.error : ""}
-            {props.news ? props.news.map(article => {
+            {props.forex ? props.forex.map(article => {
                 return(
                     <Article news = {article} favorite={false} key={article.id} />
                 )

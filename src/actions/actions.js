@@ -21,10 +21,10 @@ export const FETCH_NEWS_START = "FETCH_NEWS_START"
 export const FETCH_NEWS_COMPLETE = "FETCH_NEWS_COMPLETE"
 export const FETCH_NEWS_FAIL = "FETCH_NEWS_FAIL"
 
-// // CURRENCY LIST ACTIONS
-// export const FETCH_CURRENCIES_START = "FETCH_CURRENCIES_START"
-// export const FETCH_CURRENCIES_COMPLETE= "FETCH_CURRENCIES_COMPLETE"
-// export const FETCH_CURRENCIES_FAIL= "FETCH_CURRENCIES_FAIL"
+// FOREX ACTIONS
+export const FETCH_FOREX_START = "FETCH_FOREX_START"
+export const FETCH_FOREX_COMPLETE = "FETCH_FOREX_COMPLETE"
+export const FETCH_FOREX_FAIL = "FETCH_FOREX_FAIL"
 
 // FAVORITE NEWS LIST ACTIONS
 export const ADD_FAVORITE_NEWS = "ADD_FAVORITE_NEWS"
@@ -65,11 +65,11 @@ export const loginUser = (newLogin) => (dispatch) => {
 export const fetchNews = () => (dispatch) => {
     dispatch({type: FETCH_NEWS_START})
     axios
-    .get('https://finnhub.io/api/v1/news?category=forex&minId=10&token=c8ofbuaad3iatn99j4qg')
+    .get('https://finnhub.io/api/v1/news?category=general&minId=10&token=c8ofbuaad3iatn99j4qg')
     .then(data => {
         dispatch({type: FETCH_NEWS_COMPLETE, payload: data.data})
     })
-    .catch(err=> {
+    .catch(err => {
         dispatch({type: FETCH_NEWS_FAIL, payload: err.message})
     })
 }
@@ -80,4 +80,16 @@ export const addFavoriteNews = (news) => (dispatch) => {
 
 export const removeFavoriteNews = (news) => (dispatch) => {
     dispatch({type: REMOVE_FAVORITE_NEWS, payload: news})
+}
+
+export const fetchForex = () => (dispatch) => {
+    dispatch({type: FETCH_FOREX_START})
+    axios
+    .get('https://finnhub.io/api/v1/forex/symbol?exchange=oanda&token=c8ofbuaad3iatn99j4qg')
+    .then(data => {
+        dispatch({type: FETCH_FOREX_COMPLETE, payload: data.data})
+    })
+    .catch(err => {
+        dispatch({type: FETCH_NEWS_FAIL, payload: err.message})
+    })
 }

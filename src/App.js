@@ -10,6 +10,8 @@ import Navbartop from './components/NavBar';
 import NavBottom from './components/NavBottom';
 import { fetchSite } from './actions/actions';
 import MyNews from './pages/MyNews';
+import MyCurrencies from './pages/MyCurrencies';
+import About from './pages/About';
 
 
 
@@ -35,6 +37,14 @@ function App(props) {
 
         <Route path="/mynews">
           <MyNews />
+        </Route>
+
+        <Route path="/mycurrencies">
+          <MyCurrencies />
+        </Route>
+
+        <Route path="/about">
+          <About />
         </Route>
 
         <Route path="/register">

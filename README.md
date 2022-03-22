@@ -1,3 +1,47 @@
+DAYDREAMFX is a simple, modern, trading site with real-time data to keep you up to date with the latest moves in the 3 major currency markets: forex, stocks, and cryptocurrency. 
+
+Front-End Hosted URL: ('https://focused-allen-155036.netlify.app/')
+
+Back-End Hosted URL: ('https://fullstack-trading-app.herokuapp.com/')
+
+Wireframe:
+
+<img src = "./" />
+
+Features: 
+
+    -Login connected to MongoDB using Bcrypt, JsonWebToken to securely store user logins.
+    
+    -News Page with favorite buttons for each article.
+
+    -Data pulling from rest API.
+    
+    -React.Bootstrap styling .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

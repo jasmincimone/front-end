@@ -9,20 +9,20 @@ const NavBarTop = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/mynews"> My News. </Nav.Link>
-                    <Nav.Link as={Link} to="/currencies"> My Currencies. </Nav.Link>
+                    <Nav.Link as={Link} to="/about"> About. </Nav.Link>
+                    <Nav.Link as={Link} to="currencies"> Currencies. </Nav.Link>
                     
 
                     <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                        <NavDropdown.Item href="#/"> Home. </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1"> About. </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/mynews"> My News. </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/mycurrencies"> My Currencies. </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.3"> GitHub. </NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/github"> GitHub. </NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 <Nav>
                     <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                    <Nav.Link eventKey={2} as={Link} to="/register">Register</Nav.Link>
+                    <Nav.Link as={Link} to="/register">Register</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
             </Container>
